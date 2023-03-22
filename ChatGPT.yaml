@@ -1,0 +1,5 @@
+payload:
+  # > ChatGPT and bing
+  - DOMAIN-SUFFIX,openai.com
+  - DOMAIN,www.bing.com
+  - DOMAIN,bing.com

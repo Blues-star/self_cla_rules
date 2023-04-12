@@ -25,7 +25,7 @@ task_list = []
 def get_rule():
     while len(rule_queue) > 0:
         rule = rule_queue.pop()
-        res = requests.get(rule["url"], headers=header, proxies=proxy)
+        res = requests.get(rule["url"], headers=header)
         assert res.status_code == 200
         item = yaml.load(res.text, Loader=yaml.FullLoader)
         rule_dict[rule["name"]] = item["payload"]

@@ -1,0 +1,35 @@
+name: update rules
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.10'
+
+    - name: Install dependencies
+      run: pip install requests pyyaml
+
+    - name: Run app
+      run: python app.py
+      
+    - name: Add changes
+      run: git add .
+
+    - name: Commit changes
+      run: git commit -m "Auto commit by GitHub Actions"
+
+    - name: Push changes
+      uses: ad-m/github-push-action@v0.6.0
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}

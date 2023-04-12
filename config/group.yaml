@@ -1,78 +1,78 @@
 国外流量:
-  ABC
-  Amazon
-  Bahamut
-  Discord
-  Google FCM
-  PROXY
-  PayPal
-  Scholar
+  - ABC
+  - Amazon
+  - Bahamut
+  - Discord
+  - Google FCM
+  - PROXY
+  - PayPal
+  - Scholar
 
 Reject:
-  Reject
+  - Reject
 
 Google FCM:
-  Google FCM
+  - Google FCM
 
 GlobalTV:
-  BBC iPlayer
-  Discovery Plus
-  Disney Plus
-  Abema TV
-  DAZN
-  F1 TV
-  Fox Now
-  Fox+
-  HBO Go
-  HBO Max
-  Hulu
-  Hulu Japan
-  JOOX
-  Japonx
-  KKBOX
-  KKTV
-  Line TV
-  Netflix
-  Niconico
-  PBS
-  Pandora
-  Pornhub
-  Soundcloud
-  Spotify
-  ViuTV
-  YouTube
-  encoreTVB
-  myTV SUPER
+  - BBC iPlayer
+  - Discovery Plus
+  - Disney Plus
+  - Abema TV
+  - DAZN
+  - F1 TV
+  - Fox Now
+  - Fox+
+  - HBO Go
+  - HBO Max
+  - Hulu
+  - Hulu Japan
+  - JOOX
+  - Japonx
+  - KKBOX
+  - KKTV
+  - Line TV
+  - Netflix
+  - Niconico
+  - PBS
+  - Pandora
+  - Pornhub
+  - Soundcloud
+  - Spotify
+  - ViuTV
+  - YouTube
+  - encoreTVB
+  - myTV SUPER
 
 Special:
-  Special
+  - Special
 Steam:
-  Steam
+  - Steam
 Telegram:
-  Telegram
+  - Telegram
 Microsoft:
-  Microsoft
+  - Microsoft
 Apple:
-  Apple
-  Apple Music
-  Apple News
-  Apple TV
+  - Apple
+  - Apple Music
+  - Apple News
+  - Apple TV
   
 国内媒体:
-  Bilibili
-  IQ
-  IQIYI
-  Letv
-  Netease Music
-  Tencent Video
-  WeTV
-  Youku
+  - Bilibili
+  - IQ
+  - IQIYI
+  - Letv
+  - Netease Music
+  - Tencent Video
+  - WeTV
+  - Youku
 
 加密货币:
-  Crypto
+  - Crypto
 
 国内流量:
-  LAN
-  Speedtest
-  Domestic
-  Domestic IPs
+  - LAN
+  - Speedtest
+  - Domestic
+  - Domestic IPs

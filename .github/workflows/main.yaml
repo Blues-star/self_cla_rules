@@ -23,11 +23,10 @@ jobs:
     - name: Run app
       run: python run.py
       
-    - name: Add changes
-      run: git add .
+    # Commit all changed files back to the repository
+    - name: Git Auto Commit
+      uses: stefanzweifel/git-auto-commit-action@v4.16.0
 
-    - name: Commit changes
-      run: git commit -m "Auto commit by GitHub Actions"
 
     - name: Push changes
       uses: ad-m/github-push-action@v0.6.0

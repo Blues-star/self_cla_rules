@@ -21,7 +21,7 @@ jobs:
       run: pip install requests pyyaml
 
     - name: Run app
-      run: python app.py
+      run: python run.py
       
     - name: Add changes
       run: git add .

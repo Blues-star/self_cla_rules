@@ -4,10 +4,10 @@ import json
 import yaml
 import threading
 
-proxy = {
-    "http": "http://127.0.0.1:1080",
-    "https": "http://127.0.0.1:1080"
-}
+# proxy = {
+#     "http": "http://127.0.0.1:1080",
+#     "https": "http://127.0.0.1:1080"
+# }
 
 config = json.load(open("config/config.json", "r",encoding="utf-8"))
 header = {

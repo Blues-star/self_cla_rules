@@ -1,0 +1,120 @@
+---
+rule-providers:
+  Apple:
+    behavior: classical
+    interval: 86400
+    path: ./Rules/Apple
+    type: http
+    url: https://ghproxy.com/https://github.com/Blues-star/self_cla_rules/blob/main/rules/Apple.yaml
+  ChatGPT:
+    behavior: classical
+    interval: 86400
+    path: ./Rules/ChatGPT
+    type: http
+    url: https://ghproxy.com/https://github.com/Blues-star/self_cla_rules/main/rules/ChatGPT.yaml
+  GlobalTV:
+    behavior: classical
+    interval: 86400
+    path: ./Rules/GlobalTV
+    type: http
+    url: https://ghproxy.com/https://github.com/Blues-star/self_cla_rules/blob/main/rules/GlobalTV.yaml
+  Google FCM:
+    behavior: classical
+    interval: 86400
+    path: ./Rules/Google FCM
+    type: http
+    url: https://ghproxy.com/https://github.com/Blues-star/self_cla_rules/blob/main/rules/Google
+      FCM.yaml
+  Microsoft:
+    behavior: classical
+    interval: 86400
+    path: ./Rules/Microsoft
+    type: http
+    url: https://ghproxy.com/https://github.com/Blues-star/self_cla_rules/blob/main/rules/Microsoft.yaml
+  Reject:
+    behavior: classical
+    interval: 86400
+    path: ./Rules/Reject
+    type: http
+    url: https://ghproxy.com/https://github.com/Blues-star/self_cla_rules/blob/main/rules/Reject.yaml
+  Special:
+    behavior: classical
+    interval: 86400
+    path: ./Rules/Special
+    type: http
+    url: https://ghproxy.com/https://github.com/Blues-star/self_cla_rules/blob/main/rules/Special.yaml
+  Steam:
+    behavior: classical
+    interval: 86400
+    path: ./Rules/Steam
+    type: http
+    url: https://ghproxy.com/https://github.com/Blues-star/self_cla_rules/blob/main/rules/Steam.yaml
+  Telegram:
+    behavior: classical
+    interval: 86400
+    path: ./Rules/Telegram
+    type: http
+    url: https://ghproxy.com/https://github.com/Blues-star/self_cla_rules/blob/main/rules/Telegram.yaml
+  加密货币:
+    behavior: classical
+    interval: 86400
+    path: ./Rules/加密货币
+    type: http
+    url: https://ghproxy.com/https://github.com/Blues-star/self_cla_rules/blob/main/rules/加密货币.yaml
+  国内媒体:
+    behavior: classical
+    interval: 86400
+    path: ./Rules/国内媒体
+    type: http
+    url: https://ghproxy.com/https://github.com/Blues-star/self_cla_rules/blob/main/rules/国内媒体.yaml
+  国内流量:
+    behavior: classical
+    interval: 86400
+    path: ./Rules/国内流量
+    type: http
+    url: https://ghproxy.com/https://github.com/Blues-star/self_cla_rules/blob/main/rules/国内流量.yaml
+  国外流量:
+    behavior: classical
+    interval: 86400
+    path: ./Rules/国外流量
+    type: http
+    url: https://ghproxy.com/https://github.com/Blues-star/self_cla_rules/blob/main/rules/国外流量.yaml
+rules:
+- RULE-SET,国外流量,国外流量
+- RULE-SET,Reject,Reject
+- RULE-SET,Google FCM,Google FCM
+- RULE-SET,GlobalTV,GlobalTV
+- RULE-SET,Special,Special
+- RULE-SET,Steam,Steam
+- RULE-SET,Telegram,Telegram
+- RULE-SET,Microsoft,Microsoft
+- RULE-SET,Apple,Apple
+- RULE-SET,国内媒体,国内媒体
+- RULE-SET,加密货币,加密货币
+- RULE-SET,国内流量,国内流量
+- GEOIP,CN,国内流量
+- MATCH,Others
+script:
+  code: |-
+    def main(ctx, metadata):
+        ruleset_action = {'国外流量': '国外流量', 'Reject': 'Reject', 'Google FCM': 'Google FCM', 'GlobalTV': 'GlobalTV', 'Special': 'Special', 'Steam': 'Steam', 'Telegram': 'Telegram', 'Microsoft': 'Microsoft', 'Apple': 'Apple', '国内媒体': '国内媒体', '加密货币': '加密货币', '国内流量': '国内流量'}
+        port = int(metadata['dst_port'])
+        if metadata['network'] == 'UDP' and port == 443:
+            ctx.log('[Script] matched QUIC traffic use reject')
+            return 'REJECT'
+        port_list = [21, 22, 23, 53, 80, 123, 143, 194, 443, 465, 587, 853, 993, 995, 998, 2052, 2053, 2082, 2083, 2086, 2095, 2096, 3389, 5222, 5228, 5229, 5230, 8080, 8443, 8880, 8888, 8889]
+        if port not in port_list:
+            ctx.log('[Script] not common port use direct')
+            return 'DIRECT'
+        if metadata['dst_ip'] == '':
+            metadata['dst_ip'] = ctx.resolve_ip(metadata['host'])
+        for ruleset in ruleset_action:
+            if ctx.rule_providers[ruleset].match(metadata):
+                return ruleset_action[ruleset]
+        if metadata['dst_ip'] != '':
+            code = ctx.geoip(metadata['dst_ip'])
+            if code == 'CN':
+                ctx.log('[Script] Geoip CN')
+                return '国内流量'
+        ctx.log('[Script] FINAL')
+        return 'Others'

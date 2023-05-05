@@ -1,78 +1,87 @@
-国外流量:
-  - ABC
-  - Amazon
-  - Bahamut
-  - Discord
-  - Google FCM
-  - PROXY
-  - PayPal
-  - Scholar
+extra-rule-providers:
+  ChatGPT:
+      behavior: classical
+      interval: 86400
+      path: ./Rules/ChatGPT
+      type: http
+      url: https://ghproxy.com/https://github.com/Blues-star/self_cla_rules/main/rules/ChatGPT.yaml
 
-Reject:
-  - Reject
+rule—groups:
+  国外流量:
+    - ABC
+    - Amazon
+    - Bahamut
+    - Discord
+    - Google FCM
+    - PROXY
+    - PayPal
+    - Scholar
 
-Google FCM:
-  - Google FCM
+  Reject:
+    - Reject
 
-GlobalTV:
-  - BBC iPlayer
-  - Discovery Plus
-  - Disney Plus
-  - Abema TV
-  - DAZN
-  - F1 TV
-  - Fox Now
-  - Fox+
-  - HBO Go
-  - HBO Max
-  - Hulu
-  - Hulu Japan
-  - JOOX
-  - Japonx
-  - KKBOX
-  - KKTV
-  - Line TV
-  - Netflix
-  - Niconico
-  - PBS
-  - Pandora
-  - Pornhub
-  - Soundcloud
-  - Spotify
-  - ViuTV
-  - YouTube
-  - encoreTVB
-  - myTV SUPER
+  Google FCM:
+    - Google FCM
 
-Special:
-  - Special
-Steam:
-  - Steam
-Telegram:
-  - Telegram
-Microsoft:
-  - Microsoft
-Apple:
-  - Apple
-  - Apple Music
-  - Apple News
-  - Apple TV
-  
-国内媒体:
-  - Bilibili
-  - IQ
-  - IQIYI
-  - Letv
-  - Netease Music
-  - Tencent Video
-  - WeTV
-  - Youku
+  GlobalTV:
+    - BBC iPlayer
+    - Discovery Plus
+    - Disney Plus
+    - Abema TV
+    - DAZN
+    - F1 TV
+    - Fox Now
+    - Fox+
+    - HBO Go
+    - HBO Max
+    - Hulu
+    - Hulu Japan
+    - JOOX
+    - Japonx
+    - KKBOX
+    - KKTV
+    - Line TV
+    - Netflix
+    - Niconico
+    - PBS
+    - Pandora
+    - Pornhub
+    - Soundcloud
+    - Spotify
+    - ViuTV
+    - YouTube
+    - encoreTVB
+    - myTV SUPER
 
-加密货币:
-  - Crypto
+  Special:
+    - Special
+  Steam:
+    - Steam
+  Telegram:
+    - Telegram
+  Microsoft:
+    - Microsoft
+  Apple:
+    - Apple
+    - Apple Music
+    - Apple News
+    - Apple TV
+    
+  国内媒体:
+    - Bilibili
+    - IQ
+    - IQIYI
+    - Letv
+    - Netease Music
+    - Tencent Video
+    - WeTV
+    - Youku
 
-国内流量:
-  - LAN
-  - Speedtest
-  - Domestic
-  - Domestic IPs
+  加密货币:
+    - Crypto
+
+  国内流量:
+    - LAN
+    - Speedtest
+    - Domestic
+    - Domestic IPs

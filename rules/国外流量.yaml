@@ -80,6 +80,10 @@ payload:
 - IP-CIDR,173.194.175.188/32,no-resolve
 - IP-CIDR,173.194.218.188/32,no-resolve
 - IP-CIDR,209.85.233.188/32,no-resolve
+- DOMAIN,cdp.cloud.unity3d.com
+- DOMAIN-SUFFIX,battle.net
+- DOMAIN-SUFFIX,battlenet.com
+- DOMAIN-SUFFIX,blizzard.com
 - DOMAIN-KEYWORD,duolingo
 - DOMAIN-SUFFIX,duolingo.cn
 - DOMAIN-SUFFIX,duolingo.com

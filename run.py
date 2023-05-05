@@ -28,7 +28,7 @@ header = {
     "User-Agent":
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36"  # noqa: E501
 }
-res = requests.get(config['rule_url'], headers=header,proxies=proxy)
+res = requests.get(config['rule_url'], headers=header)
 res = res.text.replace("- ", "  - ")
 res = "rules:\n" + res
 

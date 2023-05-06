@@ -1,103 +1,431 @@
 ---
 rule-providers:
+  ABC:
+    behavior: classical
+    interval: 86400
+    path: ./Rules/Media/ABC
+    type: http
+    url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main/Clash/Provider/Media/ABC.yaml
+  Abema TV:
+    behavior: classical
+    interval: 86400
+    path: ./Rules/Media/Abema_TV
+    type: http
+    url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main/Clash/Provider/Media/Abema%20TV.yaml
+  Amazon:
+    behavior: classical
+    interval: 86400
+    path: ./Rules/Media/Amazon
+    type: http
+    url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main/Clash/Provider/Media/Amazon.yaml
   Apple:
     behavior: classical
     interval: 86400
     path: ./Rules/Apple
     type: http
-    url: https://ghproxy.com/https://github.com/Blues-star/self_cla_rules/blob/main/rules/Apple.yaml
+    url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main/Clash/Provider/Apple.yaml
+  Apple Music:
+    behavior: classical
+    interval: 86400
+    path: ./Rules/Media/Apple_Music
+    type: http
+    url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main/Clash/Provider/Media/Apple%20Music.yaml
+  Apple News:
+    behavior: classical
+    interval: 86400
+    path: ./Rules/Media/Apple_News
+    type: http
+    url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main/Clash/Provider/Media/Apple%20News.yaml
+  Apple TV:
+    behavior: classical
+    interval: 86400
+    path: ./Rules/Media/Apple_TV
+    type: http
+    url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main/Clash/Provider/Media/Apple%20TV.yaml
+  BBC iPlayer:
+    behavior: classical
+    interval: 86400
+    path: ./Rules/Media/BBC_iPlayer
+    type: http
+    url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main/Clash/Provider/Media/BBC%20iPlayer.yaml
+  Bahamut:
+    behavior: classical
+    interval: 86400
+    path: ./Rules/Media/Bahamut
+    type: http
+    url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main/Clash/Provider/Media/Bahamut.yaml
+  Bilibili:
+    behavior: classical
+    interval: 86400
+    path: ./Rules/Media/Bilibili
+    type: http
+    url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main/Clash/Provider/Media/Bilibili.yaml
   ChatGPT:
     behavior: classical
     interval: 86400
     path: ./Rules/ChatGPT
     type: http
-    url: https://ghproxy.com/https://github.com/Blues-star/self_cla_rules/main/rules/ChatGPT.yaml
-  GlobalTV:
+    url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main/Clash/Provider/ChatGPT.yaml
+  Crypto:
     behavior: classical
     interval: 86400
-    path: ./Rules/GlobalTV
+    path: ./Rules/Crypto
     type: http
-    url: https://ghproxy.com/https://github.com/Blues-star/self_cla_rules/blob/main/rules/GlobalTV.yaml
+    url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main/Clash/Provider/Crypto.yaml
+  DAZN:
+    behavior: classical
+    interval: 86400
+    path: ./Rules/Media/DAZN
+    type: http
+    url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main/Clash/Provider/Media/DAZN.yaml
+  Discord:
+    behavior: classical
+    interval: 86400
+    path: ./Rules/Discord
+    type: http
+    url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main/Clash/Provider/Discord.yaml
+  Discovery Plus:
+    behavior: classical
+    interval: 86400
+    path: ./Rules/Media/Discovery_Plus
+    type: http
+    url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main/Clash/Provider/Media/Discovery%20Plus.yaml
+  Disney Plus:
+    behavior: classical
+    interval: 86400
+    path: ./Rules/Media/Disney_Plus
+    type: http
+    url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main/Clash/Provider/Media/Disney%20Plus.yaml
+  Domestic:
+    behavior: classical
+    interval: 86400
+    path: ./Rules/Domestic
+    type: http
+    url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main/Clash/Provider/Domestic.yaml
+  Domestic IPs:
+    behavior: ipcidr
+    interval: 86400
+    path: ./Rules/Domestic_IPs
+    type: http
+    url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main/Clash/Provider/Domestic%20IPs.yaml
+  F1 TV:
+    behavior: classical
+    interval: 86400
+    path: ./Rules/Media/F1_TV
+    type: http
+    url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main/Clash/Provider/Media/F1%20TV.yaml
+  Fox Now:
+    behavior: classical
+    interval: 86400
+    path: ./Rules/Media/Fox_Now
+    type: http
+    url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main/Clash/Provider/Media/Fox%20Now.yaml
+  Fox+:
+    behavior: classical
+    interval: 86400
+    path: ./Rules/Media/Fox+
+    type: http
+    url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main/Clash/Provider/Media/Fox%2B.yaml
   Google FCM:
     behavior: classical
     interval: 86400
     path: ./Rules/Google FCM
     type: http
-    url: https://ghproxy.com/https://github.com/Blues-star/self_cla_rules/blob/main/rules/Google
-      FCM.yaml
+    url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main/Clash/Provider/Google%20FCM.yaml
+  HBO Go:
+    behavior: classical
+    interval: 86400
+    path: ./Rules/Media/HBO_Go
+    type: http
+    url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main/Clash/Provider/Media/HBO%20Go.yaml
+  HBO Max:
+    behavior: classical
+    interval: 86400
+    path: ./Rules/Media/HBO_Max
+    type: http
+    url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main/Clash/Provider/Media/HBO%20Max.yaml
+  Hulu:
+    behavior: classical
+    interval: 86400
+    path: ./Rules/Media/Hulu
+    type: http
+    url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main/Clash/Provider/Media/Hulu.yaml
+  Hulu Japan:
+    behavior: classical
+    interval: 86400
+    path: ./Rules/Media/Hulu_Japan
+    type: http
+    url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main/Clash/Provider/Media/Hulu%20Japan.yaml
+  IQ:
+    behavior: classical
+    interval: 86400
+    path: ./Rules/Media/IQI
+    type: http
+    url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main/Clash/Provider/Media/IQ.yaml
+  IQIYI:
+    behavior: classical
+    interval: 86400
+    path: ./Rules/Media/IQYI
+    type: http
+    url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main/Clash/Provider/Media/IQIYI.yaml
+  JOOX:
+    behavior: classical
+    interval: 86400
+    path: ./Rules/Media/JOOX
+    type: http
+    url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main/Clash/Provider/Media/JOOX.yaml
+  Japonx:
+    behavior: classical
+    interval: 86400
+    path: ./Rules/Media/Japonx
+    type: http
+    url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main/Clash/Provider/Media/Japonx.yaml
+  KKBOX:
+    behavior: classical
+    interval: 86400
+    path: ./Rules/Media/KKBOX
+    type: http
+    url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main/Clash/Provider/Media/KKBOX.yaml
+  KKTV:
+    behavior: classical
+    interval: 86400
+    path: ./Rules/Media/KKTV
+    type: http
+    url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main/Clash/Provider/Media/KKTV.yaml
+  LAN:
+    behavior: classical
+    interval: 86400
+    path: ./Rules/LAN
+    type: http
+    url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main/Clash/Provider/LAN.yaml
+  Letv:
+    behavior: classical
+    interval: 86400
+    path: ./Rules/Media/Letv
+    type: http
+    url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main/Clash/Provider/Media/Letv.yaml
+  Line TV:
+    behavior: classical
+    interval: 86400
+    path: ./Rules/Media/Line_TV
+    type: http
+    url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main/Clash/Provider/Media/Line%20TV.yaml
   Microsoft:
     behavior: classical
     interval: 86400
     path: ./Rules/Microsoft
     type: http
-    url: https://ghproxy.com/https://github.com/Blues-star/self_cla_rules/blob/main/rules/Microsoft.yaml
+    url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main/Clash/Provider/Microsoft.yaml
+  Netease Music:
+    behavior: classical
+    interval: 86400
+    path: ./Rules/Media/Netease_Music
+    type: http
+    url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main/Clash/Provider/Media/Netease%20Music.yaml
+  Netflix:
+    behavior: classical
+    interval: 86400
+    path: ./Rules/Media/Netflix
+    type: http
+    url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main/Clash/Provider/Media/Netflix.yaml
+  Niconico:
+    behavior: classical
+    interval: 86400
+    path: ./Rules/Media/Niconico
+    type: http
+    url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main/Clash/Provider/Media/Niconico.yaml
+  PBS:
+    behavior: classical
+    interval: 86400
+    path: ./Rules/Media/PBS
+    type: http
+    url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main/Clash/Provider/Media/PBS.yaml
+  PROXY:
+    behavior: classical
+    interval: 86400
+    path: ./Rules/Proxy
+    type: http
+    url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main/Clash/Provider/Proxy.yaml
+  Pandora:
+    behavior: classical
+    interval: 86400
+    path: ./Rules/Media/Pandora
+    type: http
+    url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main/Clash/Provider/Media/Pandora.yaml
+  PayPal:
+    behavior: classical
+    interval: 86400
+    path: ./Rules/PayPal
+    type: http
+    url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main/Clash/Provider/PayPal.yaml
+  Pornhub:
+    behavior: classical
+    interval: 86400
+    path: ./Rules/Media/Pornhub
+    type: http
+    url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main/Clash/Provider/Media/Pornhub.yaml
   Reject:
     behavior: classical
     interval: 86400
     path: ./Rules/Reject
     type: http
-    url: https://ghproxy.com/https://github.com/Blues-star/self_cla_rules/blob/main/rules/Reject.yaml
+    url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main/Clash/Provider/Reject.yaml
+  Scholar:
+    behavior: classical
+    interval: 86400
+    path: ./Rules/Scholar
+    type: http
+    url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main/Clash/Provider/Scholar.yaml
+  Soundcloud:
+    behavior: classical
+    interval: 86400
+    path: ./Rules/Media/Soundcloud
+    type: http
+    url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main/Clash/Provider/Media/Soundcloud.yaml
   Special:
     behavior: classical
     interval: 86400
     path: ./Rules/Special
     type: http
-    url: https://ghproxy.com/https://github.com/Blues-star/self_cla_rules/blob/main/rules/Special.yaml
+    url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main/Clash/Provider/Special.yaml
+  Speedtest:
+    behavior: classical
+    interval: 86400
+    path: ./Rules/Speedtest
+    type: http
+    url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main/Clash/Provider/Speedtest.yaml
+  Spotify:
+    behavior: classical
+    interval: 86400
+    path: ./Rules/Media/Spotify
+    type: http
+    url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main/Clash/Provider/Media/Spotify.yaml
   Steam:
     behavior: classical
     interval: 86400
     path: ./Rules/Steam
     type: http
-    url: https://ghproxy.com/https://github.com/Blues-star/self_cla_rules/blob/main/rules/Steam.yaml
+    url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main/Clash/Provider/Steam.yaml
   Telegram:
     behavior: classical
     interval: 86400
     path: ./Rules/Telegram
     type: http
-    url: https://ghproxy.com/https://github.com/Blues-star/self_cla_rules/blob/main/rules/Telegram.yaml
-  加密货币:
+    url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main/Clash/Provider/Telegram.yaml
+  Tencent Video:
     behavior: classical
     interval: 86400
-    path: ./Rules/加密货币
+    path: ./Rules/Media/Tencent_Video
     type: http
-    url: https://ghproxy.com/https://github.com/Blues-star/self_cla_rules/blob/main/rules/加密货币.yaml
-  国内媒体:
+    url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main/Clash/Provider/Media/Tencent%20Video.yaml
+  ViuTV:
     behavior: classical
     interval: 86400
-    path: ./Rules/国内媒体
+    path: ./Rules/Media/ViuTV
     type: http
-    url: https://ghproxy.com/https://github.com/Blues-star/self_cla_rules/blob/main/rules/国内媒体.yaml
-  国内流量:
+    url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main/Clash/Provider/Media/ViuTV.yaml
+  WeTV:
     behavior: classical
     interval: 86400
-    path: ./Rules/国内流量
+    path: ./Rules/Media/WeTV
     type: http
-    url: https://ghproxy.com/https://github.com/Blues-star/self_cla_rules/blob/main/rules/国内流量.yaml
-  国外流量:
+    url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main/Clash/Provider/Media/WeTV.yaml
+  YouTube:
     behavior: classical
     interval: 86400
-    path: ./Rules/国外流量
+    path: ./Rules/Media/YouTube
     type: http
-    url: https://ghproxy.com/https://github.com/Blues-star/self_cla_rules/blob/main/rules/国外流量.yaml
+    url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main/Clash/Provider/Media/YouTube.yaml
+  Youku:
+    behavior: classical
+    interval: 86400
+    path: ./Rules/Media/Youku
+    type: http
+    url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main/Clash/Provider/Media/Youku.yaml
+  encoreTVB:
+    behavior: classical
+    interval: 86400
+    path: ./Rules/Media/encoreTVB
+    type: http
+    url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main/Clash/Provider/Media/encoreTVB.yaml
+  groupname:
+    behavior: classical
+    interval: 86400
+    path: ./Rules/ChatGPT
+    type: http
+    url: https://ghproxy.com/https://github.com/Blues-star/self_cla_rules/main/rules/ChatGPT.yaml
+  myTV SUPER:
+    behavior: classical
+    interval: 86400
+    path: ./Rules/Media/myTV_SUPER
+    type: http
+    url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main/Clash/Provider/Media/myTV%20SUPER.yaml
 rules:
-- RULE-SET,国外流量,国外流量
+- RULE-SET,ABC,国外流量
+- RULE-SET,Amazon,国外流量
+- RULE-SET,Bahamut,国外流量
+- RULE-SET,Discord,国外流量
+- RULE-SET,Google FCM,国外流量
+- RULE-SET,PROXY,国外流量
+- RULE-SET,PayPal,国外流量
+- RULE-SET,Scholar,国外流量
 - RULE-SET,Reject,Reject
 - RULE-SET,Google FCM,Google FCM
-- RULE-SET,GlobalTV,GlobalTV
+- RULE-SET,BBC iPlayer,GlobalTV
+- RULE-SET,Discovery Plus,GlobalTV
+- RULE-SET,Disney Plus,GlobalTV
+- RULE-SET,Abema TV,GlobalTV
+- RULE-SET,DAZN,GlobalTV
+- RULE-SET,F1 TV,GlobalTV
+- RULE-SET,Fox Now,GlobalTV
+- RULE-SET,Fox+,GlobalTV
+- RULE-SET,HBO Go,GlobalTV
+- RULE-SET,HBO Max,GlobalTV
+- RULE-SET,Hulu,GlobalTV
+- RULE-SET,Hulu Japan,GlobalTV
+- RULE-SET,JOOX,GlobalTV
+- RULE-SET,Japonx,GlobalTV
+- RULE-SET,KKBOX,GlobalTV
+- RULE-SET,KKTV,GlobalTV
+- RULE-SET,Line TV,GlobalTV
+- RULE-SET,Netflix,GlobalTV
+- RULE-SET,Niconico,GlobalTV
+- RULE-SET,PBS,GlobalTV
+- RULE-SET,Pandora,GlobalTV
+- RULE-SET,Pornhub,GlobalTV
+- RULE-SET,Soundcloud,GlobalTV
+- RULE-SET,Spotify,GlobalTV
+- RULE-SET,ViuTV,GlobalTV
+- RULE-SET,YouTube,GlobalTV
+- RULE-SET,encoreTVB,GlobalTV
+- RULE-SET,myTV SUPER,GlobalTV
 - RULE-SET,Special,Special
 - RULE-SET,Steam,Steam
 - RULE-SET,Telegram,Telegram
 - RULE-SET,Microsoft,Microsoft
 - RULE-SET,Apple,Apple
-- RULE-SET,国内媒体,国内媒体
-- RULE-SET,加密货币,加密货币
-- RULE-SET,国内流量,国内流量
+- RULE-SET,Apple Music,Apple
+- RULE-SET,Apple News,Apple
+- RULE-SET,Apple TV,Apple
+- RULE-SET,Bilibili,国内媒体
+- RULE-SET,IQ,国内媒体
+- RULE-SET,IQIYI,国内媒体
+- RULE-SET,Letv,国内媒体
+- RULE-SET,Netease Music,国内媒体
+- RULE-SET,Tencent Video,国内媒体
+- RULE-SET,WeTV,国内媒体
+- RULE-SET,Youku,国内媒体
+- RULE-SET,Crypto,加密货币
+- RULE-SET,LAN,国内流量
+- RULE-SET,Speedtest,国内流量
+- RULE-SET,Domestic,国内流量
+- RULE-SET,Domestic IPs,国内流量
 - GEOIP,CN,国内流量
 - MATCH,Others
 script:
   code: |-
     def main(ctx, metadata):
-        ruleset_action = {'国外流量': '国外流量', 'Reject': 'Reject', 'Google FCM': 'Google FCM', 'GlobalTV': 'GlobalTV', 'Special': 'Special', 'Steam': 'Steam', 'Telegram': 'Telegram', 'Microsoft': 'Microsoft', 'Apple': 'Apple', '国内媒体': '国内媒体', '加密货币': '加密货币', '国内流量': '国内流量'}
+        ruleset_action = {'ABC': '国外流量', 'Amazon': '国外流量', 'Bahamut': '国外流量', 'Discord': '国外流量', 'Google FCM': 'Google FCM', 'PROXY': '国外流量', 'PayPal': '国外流量', 'Scholar': '国外流量', 'Reject': 'Reject', 'BBC iPlayer': 'GlobalTV', 'Discovery Plus': 'GlobalTV', 'Disney Plus': 'GlobalTV', 'Abema TV': 'GlobalTV', 'DAZN': 'GlobalTV', 'F1 TV': 'GlobalTV', 'Fox Now': 'GlobalTV', 'Fox+': 'GlobalTV', 'HBO Go': 'GlobalTV', 'HBO Max': 'GlobalTV', 'Hulu': 'GlobalTV', 'Hulu Japan': 'GlobalTV', 'JOOX': 'GlobalTV', 'Japonx': 'GlobalTV', 'KKBOX': 'GlobalTV', 'KKTV': 'GlobalTV', 'Line TV': 'GlobalTV', 'Netflix': 'GlobalTV', 'Niconico': 'GlobalTV', 'PBS': 'GlobalTV', 'Pandora': 'GlobalTV', 'Pornhub': 'GlobalTV', 'Soundcloud': 'GlobalTV', 'Spotify': 'GlobalTV', 'ViuTV': 'GlobalTV', 'YouTube': 'GlobalTV', 'encoreTVB': 'GlobalTV', 'myTV SUPER': 'GlobalTV', 'Special': 'Special', 'Steam': 'Steam', 'Telegram': 'Telegram', 'Microsoft': 'Microsoft', 'Apple': 'Apple', 'Apple Music': 'Apple', 'Apple News': 'Apple', 'Apple TV': 'Apple', 'Bilibili': '国内媒体', 'IQ': '国内媒体', 'IQIYI': '国内媒体', 'Letv': '国内媒体', 'Netease Music': '国内媒体', 'Tencent Video': '国内媒体', 'WeTV': '国内媒体', 'Youku': '国内媒体', 'Crypto': '加密货币', 'LAN': '国内流量', 'Speedtest': '国内流量', 'Domestic': '国内流量', 'Domestic IPs': '国内流量'}
         port = int(metadata['dst_port'])
         if metadata['network'] == 'UDP' and port == 443:
             ctx.log('[Script] matched QUIC traffic use reject')

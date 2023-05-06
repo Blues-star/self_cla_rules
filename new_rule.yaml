@@ -65,7 +65,7 @@ rule-providers:
     interval: 86400
     path: ./Rules/ChatGPT
     type: http
-    url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/ChatGPT.yaml
+    url: https://ghproxy.com/https://github.com/Blues-star/self_cla_rules/main/rules/ChatGPT.yaml
   Crypto:
     behavior: classical
     interval: 86400
@@ -348,12 +348,6 @@ rule-providers:
     path: ./Rules/Media/encoreTVB
     type: http
     url: https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/encoreTVB.yaml
-  groupname:
-    behavior: classical
-    interval: 86400
-    path: ./Rules/ChatGPT
-    type: http
-    url: https://ghproxy.com/https://github.com/Blues-star/self_cla_rules/main/rules/ChatGPT.yaml
   myTV SUPER:
     behavior: classical
     interval: 86400

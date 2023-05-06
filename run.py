@@ -153,7 +153,7 @@ new_rule_yaml = {
     "rule-providers": ruleobj["rule-providers"]
 }
 for groupname, item_group in groupobj["extra-rule-providers"].items():
-    new_rule_yaml["rule-providers"]["groupname"] = item_group
+    new_rule_yaml["rule-providers"][groupname] = item_group
 
 with open("new_rule.yaml", "w", encoding="utf-8") as f:
     yaml.dump(new_rule_yaml,

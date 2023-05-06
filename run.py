@@ -66,8 +66,11 @@ ruleobj = yaml.load(res, Loader=yaml.FullLoader)
 # https://dler.cloud/Rules/Clash/Provider/Reject.yaml
 # https://ghproxy.com/https://github.com/dler-io/Rules/blob/main/Clash/Provider/Reject.yaml
 
+# https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Fox%20Now.yaml
+# https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main/Clash/Provider/Media/Fox%20Now.yaml
+
 for k, v in ruleobj["rule-providers"].items():
-    url: str = "https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/blob/main" + re.search(
+    url: str = "https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/main/blob" + re.search(
         f".*(/Clash/Provider/.+\.yaml)", v["url"]).group(1)
     assert url.endswith(".yaml")
     print(url)

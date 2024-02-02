@@ -71,7 +71,7 @@ ruleobj = yaml.load(res, Loader=yaml.FullLoader)
 
 for k, v in ruleobj["rule-providers"].items():
     assert v["url"].endswith(".yaml")
-    url: str = f"https://gh-proxy.com/{v["url"]}"
+    url: str = f"https://gh-proxy.com/{v['url']}"
     print(url)
     ruleobj["rule-providers"][k]["url"] = url
     rule_queue.append({"name": k, "url": url})

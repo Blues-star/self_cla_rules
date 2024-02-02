@@ -43,7 +43,7 @@ def get_rule():
         try:
             rule = rule_queue.pop()
             yamlname = rule["url"].split('/')[-1]
-            target_url = f"https://ghproxy.com/https://github.com/dler-io/Rules/blob/main/Clash/Provider/{yamlname}"
+            target_url = f"https://gh-proxy.com/https://github.com/dler-io/Rules/blob/main/Clash/Provider/{yamlname}"
             res = requests.get(target_url, headers=header)
             assert res.status_code == 200
             print("[+] " + rule["name"] + "  " + target_url)
@@ -52,7 +52,7 @@ def get_rule():
         except Exception as e:
             print("")
             print(target_url)
-            target_url = f"https://ghproxy.com/https://github.com/dler-io/Rules/blob/main/Clash/Provider/Media/{yamlname}"
+            target_url = f"https://gh-proxy.com/https://github.com/dler-io/Rules/blob/main/Clash/Provider/Media/{yamlname}"
             res = requests.get(target_url, headers=header)
             assert res.status_code == 200
             print("[+] " + rule["name"] + "  " + target_url)
@@ -70,7 +70,7 @@ ruleobj = yaml.load(res, Loader=yaml.FullLoader)
 # https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Fox%20Now.yaml
 
 for k, v in ruleobj["rule-providers"].items():
-    url: str = "https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/main" + re.search(
+    url: str = "https://gh-proxy.com/https://raw.githubusercontent.com/dler-io/Rules/main" + re.search(
         f".*(/Clash/Provider/.+\.yaml)", v["url"]).group(1)
     assert url.endswith(".yaml")
     print(url)
@@ -109,7 +109,7 @@ examples = {
     "type": "http",
     "behavior": "classical",
     "url":
-    'https://ghproxy.com/https://github.com/Blues-star/self_cla_rules/blob/main/rules/{}',
+    'https://gh-proxy.com/https://github.com/Blues-star/self_cla_rules/blob/main/rules/{}',
     "path": "./Rules/{}",
     "interval": 86400,
 }

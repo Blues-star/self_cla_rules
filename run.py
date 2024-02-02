@@ -70,7 +70,7 @@ ruleobj = yaml.load(res, Loader=yaml.FullLoader)
 # https://ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Fox%20Now.yaml
 
 for k, v in ruleobj["rule-providers"].items():
-    assert v["url"].endswith(".yaml") "非yaml结尾url,请检查config中的url连接"
+    assert v["url"].endswith(".yaml")
     url: str = f"https://gh-proxy.com/{v["url"]}"
     print(url)
     ruleobj["rule-providers"][k]["url"] = url

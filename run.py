@@ -76,10 +76,6 @@ for k, v in ruleobj["rule-providers"].items():
     ruleobj["rule-providers"][k]["url"] = url
     rule_queue.append({"name": k, "url": url})
 
-# for i in range(12):
-#     t = threading.Thread(target=get_rule)
-#     t.start()
-#     task_list.append(t)
 
 groupobj: dict = yaml.load(open("config/group.yaml", "r", encoding="utf-8"),
                            Loader=yaml.FullLoader)

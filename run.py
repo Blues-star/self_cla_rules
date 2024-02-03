@@ -38,28 +38,6 @@ task_list = []
 # https://ghproxy.com/https://github.com/dler-io/Rules/blob/main/Clash/Provider/Reject.yaml
 
 
-def get_rule():
-    while len(rule_queue) > 0:
-        try:
-            rule = rule_queue.pop()
-            yamlname = rule["url"].split('/')[-1]
-            target_url = f"https://gh-proxy.com/https://github.com/dler-io/Rules/blob/main/Clash/Provider/{yamlname}"
-            res = requests.get(target_url, headers=header)
-            assert res.status_code == 200
-            print("[+] " + rule["name"] + "  " + target_url)
-            item = yaml.load(res.text, Loader=yaml.FullLoader)
-            rule_dict[rule["name"]] = item["payload"]
-        except Exception as e:
-            print("")
-            print(target_url)
-            target_url = f"https://gh-proxy.com/https://github.com/dler-io/Rules/blob/main/Clash/Provider/Media/{yamlname}"
-            res = requests.get(target_url, headers=header)
-            assert res.status_code == 200
-            print("[+] " + rule["name"] + "  " + target_url)
-            item = yaml.load(res.text, Loader=yaml.FullLoader)
-            rule_dict[rule["name"]] = item["payload"]
-
-
 ruleobj = yaml.load(res, Loader=yaml.FullLoader)
 
 # https://github.com/dler-io/Rules/blob/main/Clash/Provider/Microsoft.yaml

@@ -71,7 +71,7 @@ rule-providers:
     interval: 86400
     path: ./Rules/ChatGPT
     type: http
-    url: https://ghproxy.com/https://raw.githubusercontent.com/Blues-star/self_cla_rules/main/rules/ChatGPT.yaml
+    url: https://mirror.ghproxy.com/https://raw.githubusercontent.com/Blues-star/self_cla_rules/main/rules/ChatGPT.yaml
   Crypto:
     behavior: classical
     interval: 86400

@@ -70,12 +70,6 @@ for item in rule_files:
         assert item.stem != "ChatGPT"
         item.unlink()
 
-# for groupname, item_group in groupobj["rule—groups"].items():
-#     new_rulegroup = {"payload": []}
-#     for item in item_group:
-#         new_rulegroup["payload"] += rule_dict[item]
-#     with open("rules/" + groupname + ".yaml", "w", encoding="utf-8") as f:
-#         yaml.dump(new_rulegroup, f)
 
 examples = {
     "type": "http",

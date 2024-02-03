@@ -25,7 +25,9 @@ jobs:
       
     # Commit all changed files back to the repository
     - name: Git Auto Commit
-      uses: stefanzweifel/git-auto-commit-action@v4.16.0
+      uses: stefanzweifel/git-auto-commit-action@v5
+      with:
+        branch: main
 
 
     - name: Push changes

@@ -428,6 +428,7 @@ rules:
 - RULE-SET,WeTV,国内媒体
 - RULE-SET,Youku,国内媒体
 - RULE-SET,Crypto,加密货币
+- RULE-SET,ChatGPT,AI助手
 - RULE-SET,LAN,国内流量
 - RULE-SET,Speedtest,国内流量
 - RULE-SET,Domestic,国内流量
@@ -437,7 +438,7 @@ rules:
 script:
   code: |-
     def main(ctx, metadata):
-        ruleset_action = {'ABC': '国外流量', 'Amazon': '国外流量', 'Bahamut': '国外流量', 'Discord': '国外流量', 'Google FCM': 'Google FCM', 'PROXY': '国外流量', 'PayPal': '国外流量', 'Scholar': '国外流量', 'Reject': 'Reject', 'BBC iPlayer': 'GlobalTV', 'Discovery Plus': 'GlobalTV', 'Disney Plus': 'GlobalTV', 'Abema TV': 'GlobalTV', 'DAZN': 'GlobalTV', 'F1 TV': 'GlobalTV', 'Fox Now': 'GlobalTV', 'Fox+': 'GlobalTV', 'HBO Go': 'GlobalTV', 'HBO Max': 'GlobalTV', 'Hulu': 'GlobalTV', 'Hulu Japan': 'GlobalTV', 'JOOX': 'GlobalTV', 'Japonx': 'GlobalTV', 'KKBOX': 'GlobalTV', 'KKTV': 'GlobalTV', 'Line TV': 'GlobalTV', 'Netflix': 'GlobalTV', 'Niconico': 'GlobalTV', 'PBS': 'GlobalTV', 'Pandora': 'GlobalTV', 'Pornhub': 'GlobalTV', 'Soundcloud': 'GlobalTV', 'Spotify': 'GlobalTV', 'ViuTV': 'GlobalTV', 'YouTube': 'GlobalTV', 'encoreTVB': 'GlobalTV', 'myTV SUPER': 'GlobalTV', 'Special': 'Special', 'Steam': 'Steam', 'Telegram': 'Telegram', 'Microsoft': 'Microsoft', 'Apple': 'Apple', 'Apple Music': 'Apple', 'Apple News': 'Apple', 'Apple TV': 'Apple', 'Bilibili': '国内媒体', 'IQ': '国内媒体', 'IQIYI': '国内媒体', 'Letv': '国内媒体', 'Netease Music': '国内媒体', 'Tencent Video': '国内媒体', 'WeTV': '国内媒体', 'Youku': '国内媒体', 'Crypto': '加密货币', 'LAN': '国内流量', 'Speedtest': '国内流量', 'Domestic': '国内流量', 'Domestic IPs': '国内流量'}
+        ruleset_action = {'ABC': '国外流量', 'Amazon': '国外流量', 'Bahamut': '国外流量', 'Discord': '国外流量', 'Google FCM': 'Google FCM', 'PROXY': '国外流量', 'PayPal': '国外流量', 'Scholar': '国外流量', 'Reject': 'Reject', 'BBC iPlayer': 'GlobalTV', 'Discovery Plus': 'GlobalTV', 'Disney Plus': 'GlobalTV', 'Abema TV': 'GlobalTV', 'DAZN': 'GlobalTV', 'F1 TV': 'GlobalTV', 'Fox Now': 'GlobalTV', 'Fox+': 'GlobalTV', 'HBO Go': 'GlobalTV', 'HBO Max': 'GlobalTV', 'Hulu': 'GlobalTV', 'Hulu Japan': 'GlobalTV', 'JOOX': 'GlobalTV', 'Japonx': 'GlobalTV', 'KKBOX': 'GlobalTV', 'KKTV': 'GlobalTV', 'Line TV': 'GlobalTV', 'Netflix': 'GlobalTV', 'Niconico': 'GlobalTV', 'PBS': 'GlobalTV', 'Pandora': 'GlobalTV', 'Pornhub': 'GlobalTV', 'Soundcloud': 'GlobalTV', 'Spotify': 'GlobalTV', 'ViuTV': 'GlobalTV', 'YouTube': 'GlobalTV', 'encoreTVB': 'GlobalTV', 'myTV SUPER': 'GlobalTV', 'Special': 'Special', 'Steam': 'Steam', 'Telegram': 'Telegram', 'Microsoft': 'Microsoft', 'Apple': 'Apple', 'Apple Music': 'Apple', 'Apple News': 'Apple', 'Apple TV': 'Apple', 'Bilibili': '国内媒体', 'IQ': '国内媒体', 'IQIYI': '国内媒体', 'Letv': '国内媒体', 'Netease Music': '国内媒体', 'Tencent Video': '国内媒体', 'WeTV': '国内媒体', 'Youku': '国内媒体', 'Crypto': '加密货币', 'ChatGPT': 'AI助手', 'LAN': '国内流量', 'Speedtest': '国内流量', 'Domestic': '国内流量', 'Domestic IPs': '国内流量'}
         port = int(metadata['dst_port'])
         if metadata['network'] == 'UDP' and port == 443:
             ctx.log('[Script] matched QUIC traffic use reject')

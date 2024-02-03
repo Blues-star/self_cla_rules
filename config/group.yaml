@@ -55,12 +55,16 @@ rule—groups:
 
   Special:
     - Special
+    
   Steam:
     - Steam
+    
   Telegram:
     - Telegram
+    
   Microsoft:
     - Microsoft
+    
   Apple:
     - Apple
     - Apple Music
@@ -79,7 +83,10 @@ rule—groups:
 
   加密货币:
     - Crypto
-
+    
+  AI助手:
+    - ChatGPT
+    
   国内流量:
     - LAN
     - Speedtest

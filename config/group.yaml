@@ -6,7 +6,7 @@ extra-rule-providers:
       type: http
       url: https://mirror.ghproxy.com/https://raw.githubusercontent.com/Blues-star/self_cla_rules/main/rules/ChatGPT.yaml
   GFW_Rule:
-      behavior: classical
+      behavior: domain
       interval: 86400
       path: ./Rules/GFW_Rule
       type: http

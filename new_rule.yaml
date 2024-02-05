@@ -137,7 +137,7 @@ rule-providers:
     interval: 86400
     path: ./Rules/GFW_Rule
     type: http
-    url: https://mirror.ghproxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/blob/release/gfw.txt
+    url: https://mirror.ghproxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/gfw.txt
   Google FCM:
     behavior: classical
     interval: 86400

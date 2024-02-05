@@ -133,7 +133,7 @@ rule-providers:
     type: http
     url: https://mirror.ghproxy.com/https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Fox%2B.yaml
   GFW_Rule:
-    behavior: classical
+    behavior: domain
     interval: 86400
     path: ./Rules/GFW_Rule
     type: http
